@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+html,body{
+    background: #1C1B21;
+}
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 10px; 
+}
+body::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(122, 102, 204);  
+    border-radius: 20px;     
+}
+.container{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 58%;
+}
+header{
+    width: 100%;
+    margin-top: 30px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: center;
+}
+.logo{
+    height: 50px;
+    width: 150px;
+    margin-right: 9px;
+}
+.link{
+    text-decoration: none;
+    margin-left: 56px;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.img_heaher{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(5px);
+}
+.img_bg{
+    width: 100%;
+    height: 100vh;
+}
+.text_play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.title_name{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+.name_audio{
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 150px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    color: #ffffff00;
+}
+.audio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    align-items: center;
+    width: 100%;
+}
+.start{
+    width: 0; 
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 22px solid #FFFFFF;
+    border-bottom: 12px solid transparent;
+    cursor: pointer;
+}
+.width_anim{
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.seek_slider{
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: #FFFFFF;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+.seek_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 3px;
+    background: #7A66CC;
+    height: 20px;
+}
+.volum{
+    width: 80px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: #FFFFFF;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+.volum::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 10px;
+    background: #7A66CC;
+    height: 10px;
+    border-radius: 100%;
+}
+.time{
+    display: flex;
+}
+.current_time,
+.total_duration{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.slash{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;  
+}
+#width{
+    position: absolute;
+    height: 3px;
+    background: #7A66CC;
+}
+.all_news{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.news{
+    position: relative;
+    width: 32%;
+    height: 50%;
+}
+.img_news{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 0px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.news_bg_text{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    background: #7a66ccd7;
+    bottom: 0;
+    border-radius: 0 0 20px 0;
+    line-height: 22px; 
+}
+.news_text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 90%;
+    color: #FFFFFF; 
+}
+.block_track_list{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.block_img_track{
+    border-radius: 100%;
+    width: 450px;
+    height: 450px;
+    background: #7A66CC;
+    border: 18px solid #504483;
+    padding: 18px;
+}
+.rotate {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: rotate 10s infinite linear;
+    filter: blur(1px);
+}
+.paused {
+    animation-play-state: paused;
+}
+@keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+.track_name_block{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+.id_track{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+.track_name_avtor{
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-left: 15px;
+}
+.active{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-left: 15px;
+    color: #7A66CC;
+}
+footer{
+    background: #18171c;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .logo{
+    margin-top: 20px;
+}
+.contact_name_flex{
+    display: flex;
+    margin-top: 40px;
+}
+.contact_name{
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.contact_name_small{
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.links_social_flex{
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+}
+.links_social{
+    background: #2C2C2C;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 100%;
+}
